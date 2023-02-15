@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:11-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: lets-meet
+      POSTGRES_USER: postgres
+      POSTGRES_DB: lets-meet
+    ports:
+      - 5432:5432
