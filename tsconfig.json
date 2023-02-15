@@ -1,11 +1,22 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es6",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "dist"
-  },
-  "lib": ["es2015"]
-}
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "skipLibCheck": true,
+      "paths": {
+        "*": ["node_modules/*"]
+      },
+      "lib": [
+        "ES2021.String"
+      ],
+      "types": []
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }

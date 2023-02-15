@@ -1,0 +1,43 @@
+GET http://127.0.0.1:5005/api/meetEvents/
+Content-type: application/json
+
+###
+
+POST http://127.0.0.1:5005/api/meetEvents/
+Content-type: application/json
+
+{
+    "userId": "9315138a-1d9e-11ed-861d-0242ac120002",
+    "title": "Lets meet and drink beer!",
+    "category": "alcohol",
+    "gender": "any",
+    "participants": 5,
+    "latitude": "50.06413864861471",
+    "longitude": "19.940898929749395",
+    "place": "Floriańska 43, 31-019 Kraków",
+    "ageFrom": 18,
+    "ageTo": 99,
+    "description": "Looking for friends to frink beer with",
+    "date": null
+}
+
+###
+
+GET http://127.0.0.1:5005/api/meetEvents/bd456322-35ae-4c82-ade8-704a33c42f73
+Content-type: application/json
+
+###
+
+PUT http://127.0.0.1:5005/api/meetEvents/bd456322-35ae-4c82-ade8-704a33c42f73
+Content-type: application/json
+
+{
+    "date": "Mon, 25 Jul 2022 14:48:50 GMT"
+}
+
+###
+
+DELETE http://127.0.0.1:5005/api/meetEvents/bd456322-35ae-4c82-ade8-704a33c42f73
+Content-type: application/json
+
+###
