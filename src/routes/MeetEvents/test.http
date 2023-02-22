@@ -37,7 +37,7 @@ Content-type: application/json
 
 ###
 
-DELETE http://127.0.0.1:5005/api/meetEvents/bd456322-35ae-4c82-ade8-704a33c42f73
+DELETE http://127.0.0.1:5005/api/meetEvents/1f1d3915-5211-4add-b3e0-aab3c9cce485
 Content-type: application/json
 
 ###
