@@ -1,0 +1,68 @@
+GET http://127.0.0.1:5005/api/users/?pageSize=20&page=0
+Content-type: application/json
+
+
+###
+
+POST http://127.0.0.1:5005/api/users/
+Content-type: application/json
+
+{
+      "apple_id": "kJxFhwlOQab0ZqDL05n8lSrFcXL2",
+      "google_id": "kJxFhwlOQab0ZqDL05n8lSrFcXL2",
+      "firebase_id": "kJxFhwlOQab0ZqDL05n8lSrFcXL2",
+      "email": "eee@eee.com"
+
+}
+
+
+###
+POST http://127.0.0.1:5005/api/users/email/
+Content-type: application/json
+
+{
+      "email": "eee@eee.com"
+
+}
+###
+POST http://127.0.0.1:5005/api/users/verify
+Content-type: application/json
+{
+      "email": "eee@eee.com"
+
+}
+
+###
+
+GET http://127.0.0.1:5005/api/users/reset/
+Content-type: application/json
+{
+      "email": "eee@eee.com"
+
+}
+
+###
+
+POST http://127.0.0.1:5005/api/users/id-provider/firebase_id/
+Content-type: application/json
+
+{
+      "id": "kJxFhwlOQab0ZqDL05n8lSrFcXL2"
+
+}
+###
+
+PUT http://127.0.0.1:5005/api/users/32de7969-cd3e-4677-aaa7-1618d34d49f4
+Content-type: application/json
+
+{
+    "name": "Test1",
+    "surname": "Test1"
+}
+
+###
+
+DELETE http://127.0.0.1:5005/api/users/rb93baMdaPTi1VLozFEwjgDlmKQ2
+Content-type: application/json
+
+###

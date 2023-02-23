@@ -1,0 +1,18 @@
+GET http://127.0.0.1:5005/api/users/?pageSize=20&page=0
+Content-type: application/json
+
+
+###
+
+POST http://127.0.0.1:5005/api/user-info
+Content-type: application/json
+
+{
+      "user_id": "246198e2-4b24-4c22-9961-3534d1c538de",
+      "name": "Test1",
+      "surname": "Test1",
+      "date_of_birth": "10-09-1995",
+      "gender": "male",
+      "age": 19
+
+}
