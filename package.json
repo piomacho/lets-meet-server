@@ -30,6 +30,8 @@
     "firebase-admin": "^11.5.0",
     "fp-ts": "^2.13.1",
     "io-ts": "^2.2.20",
+    "nodemailer": "^6.9.1",
+    "nodemailer-express-handlebars": "^6.0.0",
     "pg": "^8.9.0",
     "sequelize": "^6.28.0",
     "sequelize-cli": "^6.6.0",

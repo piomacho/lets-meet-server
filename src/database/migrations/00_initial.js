@@ -59,6 +59,7 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
       }
     });
+    
   },
 
   async down({ context: queryInterface }) {
