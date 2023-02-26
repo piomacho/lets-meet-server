@@ -33,6 +33,10 @@ module.exports = {
         age: {
             allowNull: false,
             type: Sequelize.DataTypes.SMALLINT,
+        },
+        photo: {
+            allowNull: true,
+            type: Sequelize.DataTypes.BLOB('long'),
         }
     });
     

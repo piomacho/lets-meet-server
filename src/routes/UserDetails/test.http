@@ -1,6 +1,3 @@
-GET http://127.0.0.1:5005/api/users/?pageSize=20&page=0
-Content-type: application/json
-
 
 ###
 
@@ -13,6 +10,7 @@ Content-type: application/json
       "surname": "Test1",
       "date_of_birth": "10-09-1995",
       "gender": "male",
-      "age": 19
+      "age": 19,
+      "photo": null
 
 }

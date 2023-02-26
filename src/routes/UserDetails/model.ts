@@ -9,7 +9,8 @@ const UserInfoCreationIO = t.interface({
     surname: t.string,
     date_of_birth: t.string,
     gender: t.string,
-    age: t.number
+    age: t.number,
+    photo: t.union([t.string, t.null])
 });
 
 export const isUserInfo = createGuard(UserInfoCreationIO);
@@ -56,6 +57,10 @@ export const UserDetails = sequelize.define<UserInfoInstance>(
         age: {
             allowNull: false,
             type: DataTypes.SMALLINT,
+        },
+        photo: {
+            allowNull: true,
+            type: DataTypes.BLOB('long'),
         }
     }
 );
