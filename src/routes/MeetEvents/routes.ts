@@ -4,7 +4,8 @@ import {
     createMeetEvent,
     getMeetEvent,
     updateMeetEvent,
-    deleteMeetEvent
+    deleteMeetEvent,
+    fetchMeetEventsWithParams
 } from './actions';
 
 const router = Router();
@@ -15,6 +16,10 @@ router.get('/', async (req: Request, res: Response) => {
 
 router.post('/', async (req: Request, res: Response) => {
     createMeetEvent(req, res);
+});
+
+router.post('/fetch', async (req: Request, res: Response) => {
+    fetchMeetEventsWithParams(req, res);
 });
 
 router.get('/:id', async (req: Request, res: Response) => {

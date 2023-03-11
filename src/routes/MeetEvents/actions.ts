@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { responseError, responseSuccess } from '../../utils/responses';
-import { isMeetEventsCreate, MeetEvents } from './model';
+import { isFetchMeetEvents, isMeetEventsCreate, MeetEvents } from './model';
 import { v4 } from 'uuid';
 
 export const getMeetEvents = async (_req: Request, res: Response) => {
@@ -23,6 +23,43 @@ export const createMeetEvent = async (req: Request, res: Response) => {
             responseSuccess(res, meetEvent);
         } else {
             responseError(res, 'decode', 'createMeetEvent');
+        }
+
+    } catch (err) {
+        responseError(res, err.message, 'createMeetEvent');
+    }
+}
+
+export const fetchMeetEventsWithParams = async (req: Request, res: Response) => {
+    try {
+        const data = req.body;
+        if (isFetchMeetEvents(data)) {
+            if (data.category === null && data.gender === null) {
+                const meetEvents = await MeetEvents.findAll();
+                responseSuccess(res, meetEvents);
+            } else if(data.category === null && data.gender !== null) {
+                const meetEvent = await MeetEvents.findAll({
+                     where: {
+                        gender: data.gender
+                  }})
+                responseSuccess(res, meetEvent);
+            } else if(data.category !== null && data.gender === null) {
+                const meetEvent = await MeetEvents.findAll({
+                     where: {
+                        category: data.category
+                  }})
+                responseSuccess(res, meetEvent);
+            } else {
+                const meetEvent = await MeetEvents.findAll({
+                     where: {
+                        category: data.category,
+                        gender: data.gender
+                  }})
+                responseSuccess(res, meetEvent);
+            }
+            
+        } else {
+            responseError(res, 'decode', 'fetchMeetEventsWithParams');
         }
 
     } catch (err) {
