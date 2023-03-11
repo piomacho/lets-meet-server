@@ -20,6 +20,14 @@ Content-type: application/json
     "description": "Looking for friends to frink beer with",
     "date": null
 }
+### 
+POST http://127.0.0.1:5005/api/meetEvents/fetch
+Content-type: application/json
+
+{
+    "gender": "all",
+    "category": null
+}
 
 ###
 

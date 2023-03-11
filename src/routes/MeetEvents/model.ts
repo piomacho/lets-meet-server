@@ -18,7 +18,14 @@ const MeetEventsCreateIO = t.interface({
     date: t.union([t.string, t.null]),
 });
 
+const MeetsEventsFetchIO = t.interface({
+  gender: t.union([t.string, t.null]),
+  category: t.union([t.string, t.null]),
+});
+
 export const isMeetEventsCreate = createGuard(MeetEventsCreateIO);
+
+export const isFetchMeetEvents = createGuard(MeetsEventsFetchIO);
 
 type MeetEventsCreateType = t.TypeOf<typeof MeetEventsCreateIO>;
 type MeetEventsType = MeetEventsCreateType & { id: string };
